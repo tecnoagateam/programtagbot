@@ -156,7 +156,7 @@ async def stop(client, message):
       has_permissions = message.sender_chat  
     if has_permissions:
       if not message.chat.id in chatQueue:
-        await message.reply("🤷🏻‍♀️ | There is no ongoing process to stop.")
+        await message.reply("🤷🏻‍♀️ | Dayandırılacaq tağ prosesi yoxdur.")
       else:
         stopProcess = True
         await message.reply("🛑 | Proses uğurla dayandı.")
