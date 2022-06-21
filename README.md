@@ -64,7 +64,7 @@
 
 ### Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/teletips/PingAllBot-TeLeTiPs)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/AzeMusic/programtagbot)
     
 ### Okteto
 
