@@ -123,7 +123,7 @@ async def remove(client, message):
             else:
               k = 0
               processTime = lenDeletedList*10
-              temp = await teletips.send_message(message.chat.id, f"🚨 | Total of {lenDeletedList} deleted accounts has been detected.\n⏳ | Estimated time: {processTime} seconds from now.")
+              temp = await teletips.send_message(message.chat.id, f"🚨 | Cəmi {lenDeletedList} deleted accounts has been detected.\n⏳ | Estimated time: {processTime} seconds from now.")
               if stopProcess: stopProcess = False
               while len(deletedList) > 0 and not stopProcess:   
                 deletedAccount = deletedList.pop(0)
@@ -134,7 +134,7 @@ async def remove(client, message):
                 k+=1
                 await asyncio.sleep(10)
               if k == lenDeletedList:  
-                await message.reply(f"✅ | Successfully removed all deleted accounts from this chat.")  
+                await message.reply(f"✅ | Bütün silinmiş hesablar bu söhbətdən uğurla silindi.")  
                 await temp.delete()
               else:
                 await message.reply(f"✅ | Successfully removed {k} deleted accounts from this chat.")  
@@ -159,7 +159,7 @@ async def stop(client, message):
         await message.reply("🤷🏻‍♀️ | There is no ongoing process to stop.")
       else:
         stopProcess = True
-        await message.reply("🛑 | Stopped.")
+        await message.reply("🛑 | Proses uğurla dayandı.")
     else:
       await message.reply("👮🏻 | Sorry, **only admins** can execute this command.")
   except FloodWait as e:
