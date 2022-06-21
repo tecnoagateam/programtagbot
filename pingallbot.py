@@ -34,10 +34,10 @@ async def everyone(client, message):
       has_permissions = message.sender_chat  
     if has_permissions:
       if len(chatQueue) > 5:
-        await message.reply("⛔️ | I'm already working on my maximum number of 5 chats at the moment. Please try again shortly.")
+        await message.reply("⛔️ | Hazırda maksimum 5 söhbətim üzərində işləyirəm. Lütfən, tezliklə yenidən cəhd edin")
       else:  
         if message.chat.id in chatQueue:
-          await message.reply("🚫 | There's already an ongoing process in this chat. Please /stop to start a new one.")
+          await message.reply("🚫 | Bu çatda artıq davam edən proses var. Yenisini başlamaq üçün zəhmət olmasa /stop vəya /cancel əmrini işlədin.")
         else:  
           chatQueue.append(message.chat.id)
           if len(message.command) > 1:
