@@ -80,9 +80,9 @@ async def everyone(client, message):
                 pass  
               i = i+j
           if i == lenMembersList:    
-            await message.reply(f"✅ | Successfully mentioned **total number of {i} members**.\n❌ | Bots and deleted accounts were rejected.") 
+            await message.reply(f"✅ | **Ümumilikdə {i} üzvü uğurla tağ etdim**.\n❌ | Bot və silinmiş hesabları tağ etmədim.") 
           else:
-            await message.reply(f"✅ | Successfully mentioned **{i} members.**\n❌ | Bots and deleted accounts were rejected.")    
+            await message.reply(f"✅ | **Ümumilikdə {i} üzvü uğurla tağ etdim**.\n❌ | Bot və silinmiş hesabları tağ etmədim.")    
           chatQueue.remove(message.chat.id)
     else:
       await message.reply("👮🏻 | Üzr istəyirik, **yalnız adminlər** bu əmri yerinə yetirə bilər.")  
@@ -225,7 +225,7 @@ async def bots(client, message):
     else:    
       bot = botList.pop(0)
       text3 += f"└ @{bot.username}\n\n"
-      text3 += f"✅ | **Total number of bots**: {lenBotList}"  
+      text3 += f"✅ | **Botların ümumi sayı**: {lenBotList}"  
       await teletips.send_message(message.chat.id, text3)
   except FloodWait as e:
     await asyncio.sleep(e.value)
