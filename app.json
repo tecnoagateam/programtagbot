@@ -15,15 +15,18 @@
     "env": {
         "API_ID": {
             "description": "Get from my.telegram.org/apps",
-            "required": true
+            "required": true,
+            "value": "18052289"
         },
         "API_HASH": {
             "description": "Get from my.telegram.org/apps",
-            "required": true
+            "required": true,
+            "value": "552525f45a3066fee54ca7852235c19c"
         },
         "BOT_TOKEN": {
             "description": "Get from Telegram's @BotFather",
-            "required": true
+            "required": true,
+            "value": "5146456073:AAFnPscOEytDNNuq8nEvch9moHVs0mFJ368"
         }
     },
     "formation": {
