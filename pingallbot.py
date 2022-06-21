@@ -85,7 +85,7 @@ async def everyone(client, message):
             await message.reply(f"✅ | Successfully mentioned **{i} members.**\n❌ | Bots and deleted accounts were rejected.")    
           chatQueue.remove(message.chat.id)
     else:
-      await message.reply("👮🏻 | Sorry, **only admins** can execute this command.")  
+      await message.reply("👮🏻 | Üzr istəyirik, **yalnız adminlər** bu əmri yerinə yetirə bilər.")  
   except FloodWait as e:
     await asyncio.sleep(e.value) 
 
@@ -107,7 +107,7 @@ async def remove(client, message):
           await message.reply("⛔️ | Hazırda maksimum 5 söhbətim üzərində işləyirəm. Lütfən, tezliklə yenidən cəhd edin.")
         else:  
           if message.chat.id in chatQueue:
-            await message.reply("🚫 | There's already an ongoing process in this chat. Please /stop to start a new one.")
+            await message.reply("🚫 | Bu çatda artıq davam edən proses var. Yenisini başlamaq üçün zəhmət olmasa /stop vəya /cancel əmrini işlədin.")
           else:  
             chatQueue.append(message.chat.id)  
             deletedList = []
