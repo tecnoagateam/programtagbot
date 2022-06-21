@@ -123,7 +123,7 @@ async def remove(client, message):
             else:
               k = 0
               processTime = lenDeletedList*10
-              temp = await teletips.send_message(message.chat.id, f"🚨 | Cəmi {lenDeletedList} deleted accounts has been detected.\n⏳ | Estimated time: {processTime} seconds from now.")
+              temp = await teletips.send_message(message.chat.id, f"🚨 | Cəmi {lenDeletedList} silinmiş hesablar aşkar edildi.\n⏳ | Təxmini vaxt: {processTime} saniyə.")
               if stopProcess: stopProcess = False
               while len(deletedList) > 0 and not stopProcess:   
                 deletedAccount = deletedList.pop(0)
