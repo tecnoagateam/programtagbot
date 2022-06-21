@@ -137,7 +137,7 @@ async def remove(client, message):
                 await message.reply(f"✅ | Bütün silinmiş hesablar bu söhbətdən uğurla silindi.")  
                 await temp.delete()
               else:
-                await message.reply(f"✅ | Successfully removed {k} deleted accounts from this chat.")  
+                await message.reply(f"✅ | {k} silinmiş hesab bu söhbətdən uğurla silindi.")  
                 await temp.delete()  
               chatQueue.remove(message.chat.id)
     else:
