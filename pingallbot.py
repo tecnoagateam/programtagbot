@@ -206,7 +206,7 @@ async def admins(client, message):
           text2 += f"└ {admin.mention}\n\n"
         else:
           text2 += f"└ @{admin.username}\n\n"
-      text2 += f"✅ | **İdarəçilərin ümumi sayı**: {lenAdminList}\n❌ | Bots and hidden admins were rejected."  
+      text2 += f"✅ | **İdarəçilərin ümumi sayı**: {lenAdminList}\n❌ | Botlar və gizli adminlər rədd edildi."  
       await teletips.send_message(message.chat.id, text2)           
   except FloodWait as e:
     await asyncio.sleep(e.value)       
@@ -218,7 +218,7 @@ async def bots(client, message):
     async for bot in teletips.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.BOTS):
       botList.append(bot.user)
     lenBotList = len(botList) 
-    text3  = f"**BOT LIST - {message.chat.title}**\n\n🤖 Bots\n"
+    text3  = f"**BOT LIST** - `{message.chat.title}`\n\n🤖 __Bots__\n"
     while len(botList) > 1:
       bot = botList.pop(0)
       text3 += f"├ @{bot.username}\n"    
