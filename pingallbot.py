@@ -118,7 +118,7 @@ async def remove(client, message):
                 pass
             lenDeletedList = len(deletedList)  
             if lenDeletedList == 0:
-              await message.reply("👻 | No deleted accounts in this chat.")
+              await message.reply("👻 | Bu söhbətdə silinmiş hesab yoxdur.")
               chatQueue.remove(message.chat.id)
             else:
               k = 0
@@ -141,7 +141,7 @@ async def remove(client, message):
                 await temp.delete()  
               chatQueue.remove(message.chat.id)
     else:
-      await message.reply("👮🏻 | Sorry, **only admins** can execute this command.")  
+      await message.reply("👮🏻 | Üzr istəyirik, **yalnız adminlər** bu əmri yerinə yetirə bilər.")  
   except FloodWait as e:
     await asyncio.sleep(e.value)                               
         
@@ -161,7 +161,7 @@ async def stop(client, message):
         stopProcess = True
         await message.reply("🛑 | Proses uğurla dayandı.")
     else:
-      await message.reply("👮🏻 | Sorry, **only admins** can execute this command.")
+      await message.reply("👮🏻 | Üzr istəyirik, **yalnız adminlər** bu əmri yerinə yetirə bilər.")
   except FloodWait as e:
     await asyncio.sleep(e.value)
 
@@ -185,13 +185,13 @@ async def admins(client, message):
     try:
       owner = ownerList[0]
       if owner.username == None:
-        text2 += f"👑 Owner\n└ {owner.mention}\n\n👮🏻 Admins\n"
+        text2 += f"👑 Sahib\n└ {owner.mention}\n\n👮🏻 Adminlər\n"
       else:
-        text2 += f"👑 Owner\n└ @{owner.username}\n\n👮🏻 Admins\n"
+        text2 += f"👑 Sahib\n└ @{owner.username}\n\n👮🏻 Adminlər\n"
     except:
-      text2 += f"👑 Owner\n└ <i>Hidden</i>\n\n👮🏻 Admins\n"
+      text2 += f"👑 Sahib\n└ <i>Hidden</i>\n\n👮🏻 Adminlər\n"
     if len(adminList) == 0:
-      text2 += "└ <i>Admins are hidden</i>"  
+      text2 += "└ <i>Adminlər gizlidir</i>"  
       await teletips.send_message(message.chat.id, text2)   
     else:  
       while len(adminList) > 1:
@@ -206,7 +206,7 @@ async def admins(client, message):
           text2 += f"└ {admin.mention}\n\n"
         else:
           text2 += f"└ @{admin.username}\n\n"
-      text2 += f"✅ | **Total number of admins**: {lenAdminList}\n❌ | Bots and hidden admins were rejected."  
+      text2 += f"✅ | **İdarəçilərin ümumi sayı**: {lenAdminList}\n❌ | Bots and hidden admins were rejected."  
       await teletips.send_message(message.chat.id, text2)           
   except FloodWait as e:
     await asyncio.sleep(e.value)       
