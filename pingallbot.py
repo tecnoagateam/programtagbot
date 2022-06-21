@@ -101,10 +101,10 @@ async def remove(client, message):
     if has_permissions:
       bot = await teletips.get_chat_member(message.chat.id, "self")
       if bot.status == ChatMemberStatus.MEMBER:
-        await message.reply("🕹 | I need admin permissions to remove deleted accounts.")  
+        await message.reply("🕹 | Silinmiş hesabları silmək üçün mənə admin icazələri lazımdır.")  
       else:  
         if len(chatQueue) > 5 :
-          await message.reply("⛔️ | I'm already working on my maximum number of 5 chats at the moment. Please try again shortly.")
+          await message.reply("⛔️ | Hazırda maksimum 5 söhbətim üzərində işləyirəm. Lütfən, tezliklə yenidən cəhd edin.")
         else:  
           if message.chat.id in chatQueue:
             await message.reply("🚫 | There's already an ongoing process in this chat. Please /stop to start a new one.")
