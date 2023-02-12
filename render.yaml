@@ -1,0 +1,17 @@
+services:
+  - type: web
+    plan: free
+    name: LedyMusicBot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: 
+    repo: https://github.com/tecnoagateam/programtagbot.git      
+    branch: main
+    envVars:
+      - key: BOT_TOKEN 
+        sync: false
+      - key: API_ID 
+        sync: false
+      - key: API_HASH 
+        sync: false    
+    autoDeploy: false
