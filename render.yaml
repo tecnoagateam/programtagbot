@@ -1,10 +1,10 @@
 services:
   - type: web
     plan: free
-    name: LedyMusicBot
+    name: programtagbot
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: 
+    startCommand: python3 pingallbot.py
     repo: https://github.com/tecnoagateam/programtagbot.git      
     branch: main
     envVars:
