@@ -23,7 +23,7 @@ chatQueue = []
 
 stopProcess = False
 
-@teletips.on_message(filters.command(["ledytag", "tag", "gelin", "aga", "nilay", "sema"]))
+@teletips.on_message(filters.command(["ledytag", "tecnotag", "tag", "gelin", "aga", "nilay", "sema"]))
 async def everyone(client, message):
   global stopProcess
   try: 
@@ -229,6 +229,21 @@ async def bots(client, message):
       await teletips.send_message(message.chat.id, text3)
   except FloodWait as e:
     await asyncio.sleep(e.value)
+
+
+@teletips.on_message(filters.command("thelp"))
+async def help(client, message):
+  text = '''
+Tağ və bir neçə ayrı özəllik
+**Əmrlər**:
+- /tagall  <i>Qrupdakı Bütün userləri tağ edər.</i>
+- /remove: <i>Qrupda olan silinmiş hesabları çıxardar.</i>
+- /staff: <i>Qrup admin heyatini göstərəcək.</i>
+- /bots: <i>Qrupda olan botların siyahısını göstərəcək.</i>
+- /stop: <i>Qrupda geden tağ prosesini dayandıacaq.</i>
+🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹
+'''
+  await teletips.send_message(message.chat.id, text, disable_web_page_preview=True)
 
 
 print("TELEBOTS - tağbot aktivdir 🌹!")  
