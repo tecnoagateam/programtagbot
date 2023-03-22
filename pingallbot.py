@@ -23,7 +23,7 @@ chatQueue = []
 
 stopProcess = False
 
-@teletips.on_message(filters.command(["ledytag"]))
+@teletips.on_message(filters.command(["ledytag", "tag", "gelin", "aga", "nilay", "sema"]))
 async def everyone(client, message):
   global stopProcess
   try: 
@@ -231,7 +231,7 @@ async def bots(client, message):
     await asyncio.sleep(e.value)
 
 
-print("PingAll is alive!")  
+print("TELEBOTS - tağbot aktivdir 🌹!")  
 teletips.run()
  
 #Copyright ©️ 2021 TeLe TiPs. All Rights Reserved 
